@@ -17,7 +17,7 @@ const Launcher = ({ toggle, chatOpened }) =>
 
 Launcher.propTypes = {
   toggle: PropTypes.func,
-  chatOpened: PropTypes.bool
+  chatOpened: true
 };
 
 export default connect(store => ({
