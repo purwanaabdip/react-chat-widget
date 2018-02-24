@@ -1,7 +1,7 @@
 import { Map } from 'immutable';
 import * as actionTypes from '../actions/actionTypes';
 
-const initialState = Map({ showChat: false, disabledInput: false });
+const initialState = Map({ showChat: true, disabledInput: false });
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
