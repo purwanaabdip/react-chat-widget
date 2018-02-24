@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "cross-env NODE_ENV=\"production\" webpack -p --progress",
-    "test": "jest --coverage",
+    "test": "jest -u --coverage",
     "prepublish": "npm run test && npm run build"
   },
   "keywords": [
@@ -53,8 +53,6 @@
     "file-loader": "^1.1.9",
     "husky": "^0.14.3",
     "jest": "^22.4.2",
-    "jsdom": "11.6.2",
-    "jsdom-global": "3.0.2",
     "node-sass": "^4.5.3",
     "prettier": "^1.1.0",
     "prettier-eslint": "^8.8.1",
