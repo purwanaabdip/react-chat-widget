@@ -11,13 +11,13 @@ describe('<Message />', () => {
   it('should render a <strong> element', () => {
     const message = createNewMessage('New message with **Markdown**!');
     const messageComponent = createMessageComponent(message);
-    expect(messageComponent.find('.message-text').getNode().props.dangerouslySetInnerHTML.__html).toMatchSnapshot();
+    expect(messageComponent.find('.message-text').getElement().props.dangerouslySetInnerHTML.__html).toMatchSnapshot();
   });
 
   it('should reder a <em> element', () => {
     const message = createNewMessage('New message with *Markdown*!');
     const messageComponent = createMessageComponent(message);
-    expect(messageComponent.find('.message-text').getNode().props.dangerouslySetInnerHTML.__html).toMatchSnapshot();
+    expect(messageComponent.find('.message-text').getElement().props.dangerouslySetInnerHTML.__html).toMatchSnapshot();
   });
   /* eslint-enable */
 });
