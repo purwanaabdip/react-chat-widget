@@ -1,7 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
+const BabelMinifyWebpackPlugin = require('babel-minify-webpack-plugin')
 
 module.exports = {
-  entry: './index.js',
+  entry: [ 'babel-polyfill', './index.js' ],
   output: {
     path: path.join(__dirname, '/lib'),
     filename: 'index.js',
@@ -35,5 +37,21 @@ module.exports = {
         loader: 'url-loader'
       }
     }]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new BabelMinifyWebpackPlugin({
+      keepFnName: true,
+      keepClassName: true,
+      removeConsole: true
+    }, {
+      topLevel: true,
+      comments: false,
+      sourceMap: null
+    })
+  ]
 };
