@@ -1,6 +1,16 @@
 {
   "presets": [
-    "es2015",
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "node": "current",
+          "uglify": true,
+          "useBuiltIns": true
+        }
+      }
+    ],
     "react" 
   ],
   "plugins": [
@@ -16,5 +26,12 @@
         "messagesComponents": "./src/components/Widget/components/Conversation/components/Messages/components"
       }
     }]
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
 }
