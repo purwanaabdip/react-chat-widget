@@ -7,12 +7,12 @@
 }
 
 .client {
-  @include message-bubble($turqois-2);
+  @include message-bubble(#dedede);
   margin-left: auto;
 }
 
 .response {
-  @include message-bubble($grey-2);
+  @include message-bubble($white);
 }
 
 .message {
